@@ -12,7 +12,7 @@ mv clean compile package -Pprod
 
 ## Uso
 
-Este projeto esta configurado com dois planos de rotas que sempre será registrado na inicialização. Estas rotas já configuradas servem para atender uma simulação de envio de um projeto secundário que pode ser acessado aqui.
+Este projeto esta configurado com dois planos de rotas que sempre será registrado na inicialização. Estas rotas já configuradas servem para atender uma simulação de envio de um projeto secundário que pode ser acessado [aqui](https://github.com/de-victor/xmlreader).
 O projeto será iniciado utilizando a porta 9090. é possível se conectar ao banco h2 utilizado neste projeto através da url http://localhost:9090/h2-console. O acesso ao banco esta na uri jdbc:h2:mem:delivery
 
 ## End points(GET)
