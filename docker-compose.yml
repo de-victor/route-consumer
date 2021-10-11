@@ -1,7 +1,9 @@
 version: '3'
 services:
     gm-backend:
-        image: victords/desafio-gm-backend
+        build:
+            context: route-consumer/
+            dockerfile: Dockerfile
         container_name: gm-backend
         ports:
             - "9090:9090"
@@ -9,7 +11,9 @@ services:
             - minha-rede
 
     coordinate-sender:
-        image: victords/desafio-gm-route-sender
+        build:
+            context: xmlreader/
+            dockerfile: Dockerfile
         container_name: desafio-gm-route-sender
         environment:
             - API_HOST=192.168.1.8
