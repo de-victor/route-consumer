@@ -6,8 +6,14 @@ Projeto proposto para consumo de coordenadas enviadas por dispositivos com fim d
 
 Utilize o [maven](https://maven.apache.org/) para gerar o build para router-consumer e xmlreader(xmlreade não precisa especificar -Pprod)
 
+#### Build para router-consumer
 ```bash
 mv clean compile package -Pprod
+```
+
+#### Build para xmlreader
+```bash
+mv clean compile package
 ```
 
 ## Uso
@@ -50,3 +56,13 @@ Análise de desempenho da aplicação e erros com base nos logs para otimizar o 
 
 #### Caso eu não conheça seu projeto, como posso fazê-lo funcionar sem ter que te perguntar pessoalmente?
 Os passos de execução deste projeto foi abordado neste documento, mas recomendo a utilização do docker-compose.yml para visualização da aplicação em execução junto a sua simulação de envio de rotas. Na configuração do docker-compose.yml é importante informar o ip da máquina na variável de ambiente API_HOST para que o disparo das coordenadas chegem até o backend
+
+## Referencias
+#### haversine method for distance between two locations
+* [https://github.com/jasonwinn/haversine](https://github.com/jasonwinn/haversine)
+* [https://rosettacode.org/wiki/Haversine_formula#Java](https://rosettacode.org/wiki/Haversine_formula#Java)
+* [https://github.com/locationtech/spatial4j](https://github.com/locationtech/spatial4j)
+* [https://stackoverflow.com/questions/65913433/how-to-calculate-distance-between-two-point-over-a-path](https://stackoverflow.com/questions/65913433/how-to-calculate-distance-between-two-point-over-a-path)
+
+#### Kafka
+[https://ivanqueiroz.dev/2020/09/2020-09-26-consumer-producer-kafka.html](https://ivanqueiroz.dev/2020/09/2020-09-26-consumer-producer-kafka.html)
