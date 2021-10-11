@@ -24,7 +24,7 @@ O projeto será iniciado utilizando a porta 9090. é possível se conectar ao ba
 Um crude foi desenvolvido para o end point com as verbose PUT,DELETE,POST,GET
 
 ## Uso simulado
-O projeto contem um docker-compose para a execução simulada do consumo das coordenadas. Na saída do terminal será possível ver a aproximação das coordenadas com as paradas de destino.
+O projeto contem um docker-compose para a execução simulada do consumo das coordenadas. Na saída do terminal será possível ver a aproximação das coordenadas com as paradas de destino. Nas configurações do container coordinate-sender é importante informar o ip da maquina host para que as coordenadas sejam enviadas ao backend
 
 ```bash
 docker-compose up
