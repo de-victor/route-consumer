@@ -1,0 +1,24 @@
+version: '3'
+services:
+    gm-backend:
+        image: victords/desafio-gm-backend
+        container_name: gm-backend
+        ports:
+            - "9090:9090"
+        networks: 
+            - minha-rede
+
+    coordinate-sender:
+        image: victords/desafio-gm-route-sender
+        container_name: desafio-gm-route-sender
+        environment:
+            - API_HOST=192.168.1.8
+            - API_PORT=9090
+        networks: 
+            - minha-rede
+        depends_on:
+            - gm-backend
+
+networks: 
+    minha-rede:
+        driver: bridge
