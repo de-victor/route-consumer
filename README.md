@@ -29,3 +29,29 @@ O projeto contem um docker-compose para a execução simulada do consumo das coo
 ```bash
 docker-compose up
 ```
+
+## Etapa Bônus
+
+#### Uma vez que você realizou ao menos a etapa 1, como sua aplicação vai para produção (deployment)?
+Necessário criar uma imagem docker para entregar a produção, para isso será necessário criar o jar informado na seção de Instalação junto com a configuração do dockerfile. Para este container foi utilizado a imagem base do openjdk11.
+
+```dockerfile
+FROM openjdk:11
+COPY . /usr/src/desafio
+WORKDIR /usr/src/desafio
+CMD ["java", "-jar", "desafio-1.0.0.0-all.jar"]
+EXPOSE 9090
+```
+
+```bash
+docker build -t [nome-imagem] .
+```
+
+#### Se uma falha ocorrer, como podemos visualizar os logs da sua aplicação em produção?
+Para acessar os logs se deve entrar no container fazendo uma execução de bash para dentro do mesmo, assim navegar até a pasta /logs. Uma outra alternativa é criar um volume da pasta logs para fora do container.
+
+#### Que métricas você considera importantes existirem na sua aplicação.
+Análise de desempenho da aplicação e erros com base nos logs para otimizar o serviço e corrigir possíveis falhas que possam surgir.
+
+#### Caso eu não conheça seu projeto, como posso fazê-lo funcionar sem ter que te perguntar pessoalmente?
+Os passos de execução deste projeto foi abordado neste documento, mas recomendo a utilização do docker-compose.yml para visualização da aplicação em execução.
