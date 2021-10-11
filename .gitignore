@@ -1,0 +1,9 @@
+**/target/
+**/.vscode/
+**/.settings/
+**/logs/
+**/.bak
+**/.db
+**/.classpath
+**/.project
+**/.factorypath
