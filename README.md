@@ -42,7 +42,7 @@ docker-compose up
 ## Etapa Bônus
 
 #### Uma vez que você realizou ao menos a etapa 1, como sua aplicação vai para produção (deployment)?
-Necessário criar uma imagem docker para entregar a produção, para isso é criar o jar informado na seção de Instalação junto com a configuração do dockerfile. Para este container foi utilizado a imagem base do openjdk11. O docker file para geração da imagem se encontra dentro da pasta route-consumer.
+Necessário criar uma imagem docker para entregar a produção, para isso deve-se criar o jar informado na seção de instalação junto com a configuração do dockerfile. Para este container foi utilizado a imagem base do openjdk11. O docker file para geração da imagem se encontra dentro da pasta route-consumer.
 
 ```bash
 docker build -t [nome-imagem] .
