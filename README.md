@@ -55,7 +55,7 @@ Para acessar os logs se deve entrar no container fazendo uma execução de bash 
 Análise de desempenho da aplicação e erros com base nos logs para otimizar o serviço e corrigir possíveis falhas que possam surgir.
 
 #### Caso eu não conheça seu projeto, como posso fazê-lo funcionar sem ter que te perguntar pessoalmente?
-Os passos de execução deste projeto foi abordado neste documento, mas recomendo a utilização do docker-compose.yml para visualização da aplicação em execução junto a sua simulação de envio de rotas. Na configuração do docker-compose.yml é importante informar o ip da máquina na variável de ambiente API_HOST para que o disparo das coordenadas chegem até o backend
+Os passos de execução deste projeto foi abordado neste documento, mas recomendo a utilização do docker-compose.yml para visualização da aplicação em execução junto a sua simulação de envio de rotas. Na configuração do docker-compose.yml é importante informar o ip da máquina na variável de ambiente API_HOST para que o disparo das coordenadas chegem até o backend. É importante gerar os builds das aplicações route-consumer e xmlreader antes de utilizar o docker-compose.
 
 ## Referencias
 #### haversine method for distance between two locations
